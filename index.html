@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archetyp</title>
+    <script type="module" src="./dist/ts/script.js" defer></script>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="sticky top-0 bg-white shadow-md">
+        <div class="container px-5 py-3 xl:px-10 mx-auto flex items-center justify-between">
+            <a href="/" class="flex items-center text-lg">
+                <img width="40" height="40" src="./src/img/book-bookmark-solid-full.svg"
+                    alt="Logo wirtualnej biblioteki Archetyp" class="lg:w-12">
+                <span class="font-logo text-(--accent) lg:text-xl">Archetyp</span>
+            </a>
+            <nav>
+                <button class="relative mobile-btn w-8 h-8 cursor-pointer md:hidden">
+                    <span
+                        class="line line-top absolute top-2 left-0 rounded-md bg-(--accent) w-1/2 h-0.75 transition-[width] duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)]"></span>
+                    <span class="line line-middle absolute top-4 left-0 rounded-md bg-(--accent) w-full h-0.75"></span>
+                    <span
+                        class="line line-bottom absolute top-6 right-0 rounded-md bg-(--accent) w-1/2 h-0.75 transition-[width] duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)]"></span>
+                </button>
+                <div
+                    class="mobile-navbar md:hidden fixed inset-0 text-(--accent) flex flex-col py-40 px-8 items-center gap-3 text-center bg-white translate-x-full transition-transform duration-600">
+                    <button class="hide-navbar-btn absolute right-2 top-2 p-1 cursor-pointer"><img width="35"
+                            src="./src/img/x.svg" alt=""></button>
+                    <ul class="text-2xl space-y-10 mb-10 w-full">
+                        <li><a href="#about">O nas</a></li>
+                        <li><a href="/">Wypożyczalnia</a></li>
+                        <li><a href="#bestsellers">Bestsellery</a></li>
+                    </ul>
+                    <button
+                        class="login-btn flex items-center justify-center w-full gap-2 font-semibold border border-(--accent) rounded-md py-2 px-4 min-h-11 cursor-pointer text-md">Zaloguj
+                        się <img width="20" src="./src/img/user-solid-full.svg" alt=""></button>
+                    <button
+                        class="register-btn flex items-center justify-center w-full gap-2 font-semibold text-white bg-(--accent) rounded-md py-2 min-h-11 px-4 cursor-pointer text-md">Załóż
+                        konto <img width="20" src="./src/img/user-regular-full.svg" alt=""></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>
