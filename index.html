@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="sticky top-0 bg-white shadow-md">
+    <div class="sticky top-0 bg-white shadow-md z-1000">
         <div class="container px-5 py-3 xl:px-10 mx-auto flex items-center justify-between">
             <a href="/" class="flex items-center text-lg">
                 <img width="40" height="40" src="./src/img/book-bookmark-solid-full.svg"
@@ -31,7 +31,7 @@
                         class="line line-bottom absolute top-6 right-0 rounded-md bg-(--accent) w-1/2 h-0.75 transition-[width] duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)]"></span>
                 </button>
                 <div
-                    class="mobile-navbar md:hidden fixed inset-0 text-(--accent) flex flex-col py-40 px-8 items-center gap-3 text-center bg-white translate-x-full transition-transform duration-600">
+                    class="mobile-navbar md:hidden fixed inset-0 text-(--accent) flex flex-col py-40 px-8 items-center gap-3 text-center bg-white translate-x-full transition-transform duration-600 z-1000">
                     <button class="hide-navbar-btn absolute right-2 top-2 p-1 cursor-pointer"><img width="35"
                             src="./src/img/x.svg" alt=""></button>
                     <ul class="text-2xl space-y-10 mb-10 w-full">
@@ -40,15 +40,90 @@
                         <li><a href="#bestsellers">Bestsellery</a></li>
                     </ul>
                     <button
-                        class="login-btn flex items-center justify-center w-full gap-2 font-semibold border border-(--accent) rounded-md py-2 px-4 min-h-11 cursor-pointer text-md">Zaloguj
+                        class="login-btn flex items-center justify-center gap-2 font-semibold border border-(--accent) rounded-md w-full py-2 px-4 min-h-11 cursor-pointer text-md">Zaloguj
                         się <img width="20" src="./src/img/user-solid-full.svg" alt=""></button>
                     <button
-                        class="register-btn flex items-center justify-center w-full gap-2 font-semibold text-white bg-(--accent) rounded-md py-2 min-h-11 px-4 cursor-pointer text-md">Załóż
+                        class="register-btn flex items-center justify-center gap-2 font-semibold text-white bg-(--accent) rounded-md w-full py-2 min-h-11 px-4 cursor-pointer text-md">Załóż
                         konto <img width="20" src="./src/img/user-regular-full.svg" alt=""></button>
+                </div>
+                <div class="navbar-desktop hidden md:flex gap-3">
+                    <ul
+                        class="flex items-center gap-3 text-(--accent) lg:mr-20 lg:gap-5 xl:mr-50 2xl:mr-70 2xl:text-lg 2xl:gap-10">
+                        <li><a href="#about" class="hover:text-black transition-colors">O
+                                nas</a></li>
+                        <li><a href="/" class="hover:text-black transition-colors">Wypożyczalnia</a></li>
+                        <li><a href="#bestsellers" class="hover:text-black transition-colors">Bestsellery</a></li>
+                    </ul>
+                    <button
+                        class="login-btn group flex items-center justify-center gap-2 font-semibold border border-(--accent) rounded-md py-2 px-4 min-h-10 cursor-pointer text-sm text-(--accent) transition-colors hover:bg-(--accent) hover:text-white duration-400">Zaloguj
+                        się <svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#193f64"
+                            class="group-hover:fill-white transition-colors duration-400"><!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path
+                                d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z" />
+                        </svg></button>
+                    <button
+                        class="register-btn group flex items-center justify-center gap-2 font-semibold text-white bg-(--accent) rounded-md py-2 px-4 min-h-10 border border-transparent cursor-pointer text-sm transition-colors duration-400 hover:bg-transparent hover:text-(--accent) hover:border-(--accent)">Załóż
+                        konto <svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#fff"
+                            class="transition-colors duration-400 group-hover:fill-(--accent)"><!--!Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path
+                                d="M240 192C240 147.8 275.8 112 320 112C364.2 112 400 147.8 400 192C400 236.2 364.2 272 320 272C275.8 272 240 236.2 240 192zM448 192C448 121.3 390.7 64 320 64C249.3 64 192 121.3 192 192C192 262.7 249.3 320 320 320C390.7 320 448 262.7 448 192zM144 544C144 473.3 201.3 416 272 416L368 416C438.7 416 496 473.3 496 544L496 552C496 565.3 506.7 576 520 576C533.3 576 544 565.3 544 552L544 544C544 446.8 465.2 368 368 368L272 368C174.8 368 96 446.8 96 544L96 552C96 565.3 106.7 576 120 576C133.3 576 144 565.3 144 552L144 544z" />
+                        </svg></button>
                 </div>
             </nav>
         </div>
+    </div>
+    <header class="h-[70vh] md:h-[80vh] lg:h-[95vh] relative text-white">
+        <picture>
+            <source srcset="./src/img/library-hero-img-desktop.webp" media="(width >= 768px)" />
+            <img class="w-full h-full object-cover" src="./src/img/library-hero-img-mobile.webp" alt="" />
+        </picture>
+        <div
+            class="header-content absolute inset-0 flex flex-col justify-center items-center text-center p-3 before:content-[''] before:absolute before:inset-0 before:bg-black/50 before:-z-1 z-0">
+            <h1 class="header-title">
+                <span class="block font-logo text-[clamp(1.875rem,calc(1rem+4vw),4.5rem)] text-shadow-lg">Twoja
+                    wirtualna
+                    księgarnia.</span>
+                <span class="block font-logo text-[clamp(1.875rem,calc(1rem+4vw),4.5rem)] text-shadow-lg">Wypożyczaj i
+                    czytaj bez
+                    limitów.</span>
+                <span class="block mt-3 mb-6 text-[clamp(1rem,calc(0.6rem+1vw),1.4rem)]">Odkryj tysiące e-booków
+                    dostępnych
+                    24/7</span>
+            </h1>
+            <button
+                class="bg-[#1562afa1] border border-[#1562AF] py-2 px-4 rounded-md cursor-pointer hover:bg-[#1562afb6] transition-colors md:text-xl">Rozpocznij
+                czytanie</button>
+        </div>
     </header>
+    <main>
+        <section class="landing-section rental-info" id="about">
+            <h2 class="landing-title">
+                System wypożyczeń
+            </h2>
+            <div class="landing-info container mx-auto flex flex-col lg:flex-row lg:items-start gap-8">
+                <div class="landing-box w-full text-center flex flex-col items-center">
+                    <img width="40" src="./src/img/wallet-solid-full.svg" alt="">
+                    <p class="font-semibold text-[clamp(1.15rem,calc(0.5rem+2vw),1.3rem)] my-1">Nielimitowany dostęp
+                    </p>
+                    <p class="text-[clamp(0.875rem,calc(0.4rem+1vw),1rem)]m">Nielimitowany dostęp e-booków dostępnych
+                        24/7</p>
+                </div>
+                <div class="landing-box w-full text-center flex flex-col items-center">
+                    <img width="40" src="./src/img/multidevices-icon.svg" alt="">
+                    <p class="font-semibold text-[clamp(1.15rem,calc(0.5rem+2vw),1.3rem)] my-1">Czytaj wszędzie</p>
+                    <p class="text-[clamp(0.875rem,calc(0.4rem+1vw),1rem)]">Tysiące e-booków dostępnych na każdym
+                        urządzeniu</p>
+                </div>
+                <div class="landing-box w-full text-center flex flex-col items-center">
+                    <img width="40" src="./src/img/hand-pointer-solid-full.svg" alt="">
+                    <p class="font-semibold text-[clamp(1.15rem,calc(0.5rem+2vw),1.3rem)] my-1">Wypożyczaj jednym
+                        kliknięciem</p>
+                    <p class="text-[clamp(0.875rem,calc(0.4rem+1vw),1rem)]">Otrzymaj dostęp do informacji na temat
+                        danej książki oraz jej treści</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

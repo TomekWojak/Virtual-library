@@ -1,9 +1,31 @@
 @import "tailwindcss";
-
+html {
+	scroll-behavior: smooth;
+	scroll-snap-type: mandatory;
+}
 body {
 	font-family: "Montserrat", sans-serif;
 	--accent: #193f64;
 }
 @theme {
 	--font-logo: "Playfair Display", serif;
+}
+
+.landing-section {
+	padding: 3rem;
+	scroll-margin-top: 60px;
+}
+.landing-title {
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 500;
+	margin-bottom: 3rem;
+	font-size: clamp(1rem, calc(1rem + 1vw), 1.6rem);
+}
+
+@media (width >= 768px) {
+	.landing-section {
+		padding: 5rem;
+	}
 }
