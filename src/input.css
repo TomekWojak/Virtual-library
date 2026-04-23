@@ -15,6 +15,10 @@ body {
 	padding: 3rem;
 	scroll-margin-top: 60px;
 }
+
+.library-section-shape-desktop {
+	clip-path: polygon(78% 27%, 100% 0, 100% 100%);
+}
 .landing-title {
 	text-align: center;
 	text-transform: uppercase;

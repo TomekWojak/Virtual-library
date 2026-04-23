@@ -1,7 +1,10 @@
+import { API_KEY } from "./envjs.js";
+console.log(API_KEY);
 const burgerBtn = document.querySelector<HTMLElement>(".mobile-btn");
 const mobileNavbar = document.querySelector<HTMLElement>(".mobile-navbar");
 const closeNavbarBtn = document.querySelector(".hide-navbar-btn");
 const mobileLinks = document.querySelectorAll(".mobile-navbar li a");
+
 
 const handleMobileNavBar = () => {
 	mobileNavbar?.classList.toggle("delay-300");

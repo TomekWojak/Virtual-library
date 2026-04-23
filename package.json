@@ -1,9 +1,11 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",
+    "dotenv": "^17.4.2",
     "tailwind": "^4.0.0",
     "tailwindcss": "^4.2.2"
   },
+  "type": "module",
   "name": "Archetype project",
   "version": "1.0.0",
   "description": "",
@@ -15,6 +17,7 @@
   "author": "Tomasz Wojak",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^25.6.0",
     "typescript": "^6.0.3"
   }
 }

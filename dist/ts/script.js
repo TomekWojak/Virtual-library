@@ -1,3 +1,5 @@
+import { API_KEY } from "./envjs.js";
+console.log(API_KEY);
 const burgerBtn = document.querySelector(".mobile-btn");
 const mobileNavbar = document.querySelector(".mobile-navbar");
 const closeNavbarBtn = document.querySelector(".hide-navbar-btn");
@@ -13,4 +15,3 @@ const handleMobileNavBar = () => {
 burgerBtn?.addEventListener("click", handleMobileNavBar);
 closeNavbarBtn?.addEventListener("click", handleMobileNavBar);
 mobileLinks.forEach((link) => link.addEventListener("click", handleMobileNavBar));
-export {};
